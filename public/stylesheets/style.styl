@@ -1,5 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron')
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// *                                                             * Colours * //
+clr-rainbow-1 = rgb(255, 191, 191)
+clr-rainbow-2 = rgb(255, 255, 191)
+clr-rainbow-3 = rgb(191, 255, 191)
+clr-rainbow-4 = rgb(191, 255, 255)
+clr-rainbow-5 = rgb(255, 191, 255)
+
+clr-rainbow-gradient = linear-gradient(90deg,
+    clr-rainbow-1,
+    clr-rainbow-2,
+    clr-rainbow-3,
+    clr-rainbow-4,
+    clr-rainbow-5)
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// *                                                              * Layout * //
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-a
-  color: #00B7FF
+    background black
+
+div.bg
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+    z-index -1
+
+    background url('/images/bg.png') repeat // Wallpaper is from http://www.dinpattern.com/
+    filter blur(3px)
+
+div.page
+    margin-left 10%
+    margin-right 10%
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// *                                                                * Text * //
+h1.logo
+    margin 0
+    width 300px
+
+    background clr-rainbow-gradient
+    background-size 400% 100%
+    -webkit-background-clip text
+    -webkit-text-stroke 3px transparent
+
+    font 40pt Orbitron
+    color rgba(0, 0, 0, .5)
+
+    animation 10s anim-h1-logo ease-in-out infinite alternate
+
+@keyframes anim-h1-logo
+    0%
+        background-position-x 0%
+    100%
+        background-position-x 100%
