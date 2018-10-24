@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Orbitron");
+@import url("https://fonts.googleapis.com/css?family=Orbitron|Signika");
 body {
   background: #000;
 }
@@ -16,6 +16,15 @@ div.page {
   margin-left: 10%;
   margin-right: 10%;
 }
+div.container {
+  display: flex;
+}
+div.content {
+  flex: 1 1 auto;
+  background: linear-gradient(90deg, rgba(16,32,64,0.8), rgba(16,32,64,0.2));
+  border: 1px rgba(127,191,255,0.2) solid;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+}
 h1.logo {
   margin: 0;
   width: 300px;
@@ -26,6 +35,12 @@ h1.logo {
   font: 40pt Orbitron;
   color: rgba(0,0,0,0.5);
   animation: 10s anim-h1-logo ease-in-out infinite alternate;
+}
+p {
+  margin: 3px;
+  margin-left: 10px;
+  font: 10pt Signika;
+  color: #fff;
 }
 @-moz-keyframes anim-h1-logo {
   0% {
